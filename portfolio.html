@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <i class="fa-solid fa-user-tie"></i>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul> 
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Aakash</span><br>Khandelwal</h1>
+            </div>
+        </div>
+    </div>
+ 
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Aakash photo1.jpg ">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Finding creative solutions to problems is something I have always
+                       enjoyed. As a kid I love tinkering with things that were broken,
+                       figuring out how they worked and fixing them again. When I finished
+                       high school, I knew exactly what I wanted in my career so here I am
+                       finishing up my degree at Amity University Noida. 
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p> 
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>Html</li>
+                            <li>Css</li>
+                            <li>C/C++</li>
+                            <li>Python</li>
+                            <li>Java</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024-Present</span><br>Bharat Intern</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-2026</span><br>Amity University, Noida<br>B.Tech CSE</li>
+                            <li><span>2022</span><br>Rajiv International School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/netflix clone.png">
+                    <div class="layer">
+                        <h3>Netflix Clone</h3>
+                        <p>This is a homepage of Netflix.</p>
+                        <a href="netflix.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i>aakashkhandelwal2004@gmail.com</p>
+                    <p><i class="fa-sharp fa-solid fa-square-phone"></i>8476976540</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/aakash-khandelwal-524b8324b/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/25Aakash"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/aakash2_5/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Aakash Khandelwal</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+</html>
